@@ -3,14 +3,16 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-class Portfolio extends Model {
+class Photo extends Model
+{
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'portfolios';
-    /**
+    protected $table = 'photos';
+    
+     /**
      * Indicates if the model should be timestamped.
      *
      * @var bool
@@ -22,15 +24,12 @@ class Portfolio extends Model {
      * @var array
      */
     protected $fillable = [
-        'name',
-        'description',
-        'category_id',
+        
+        'thumbnail',
+        'img',
+        'portfolio_id'
     ];
-    public function getCategory() {
-        return $this->hasOne('App\Category');
-    }
-    
-    public function photos(){
-        return $this->hasMany('App\Photo');
+    public function setPortfolio() {
+        return $this->belongsTo('App\Portfolio');
     }
 }

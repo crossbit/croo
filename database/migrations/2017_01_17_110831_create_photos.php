@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreatePortfolios extends Migration
+class CreatePhotos extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,12 @@ class CreatePortfolios extends Migration
      */
     public function up()
     {
-         Schema::create('portfolios', function (Blueprint $table) {
+        Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->text('description');
-            $table->integer('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
+            $table->string('thumbnail');
+            $table->string('img');
+            $table->integer('portfolio_id')->unsigned();
+            $table->foreign('portfolio_id')->references('id')->on('portfolios')->onDelete('cascade');
         });
     }
     /**
@@ -27,6 +27,6 @@ class CreatePortfolios extends Migration
      */
     public function down()
     {
-        Schema::drop('portfolios');
+        Schema::drop('photos');
     }
 }

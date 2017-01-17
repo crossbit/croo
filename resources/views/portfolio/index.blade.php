@@ -72,23 +72,25 @@
         </nav>
 
 
-        <section class="no-padding" id="portfolio">
+        <section class="no-padding" id="portfolio" style="padding-top:3%;">
             <div class="container-fluid">
                 <div class="row no-gutter ">
- 
-                    @foreach ($images as $image)
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="/portfolio/category/{{$image->category_id}}" class="portfolio-box">
-                            <img src="{{$image->img_path}}" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
+
+                    @foreach ($portfolios as $portfolio)
+                    @foreach($portfolio->photos->slice(0, 1) as $photo)
+                    <div class="col-lg-4 col-sm-6" style="min-height:36.8vh; background-image:url('{{$photo->thumbnail}}'); background-size: cover;">
+                        <a href="/portfolio/{{$portfolio->id}}" class="portfolio-box" style="min-height:36.8vh;">
+                            <div class="portfolio-box-caption" >
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-name">
-                                        
+                                        {{$portfolio->name}}
                                     </div>
                                 </div>
                             </div>
                         </a>
+
                     </div>
+                    @endforeach
                     @endforeach
 
                 </div>
@@ -98,8 +100,8 @@
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
-                    <h2>Zobacz wszystkie nasze projekty</h2>
-                    <a href="/portfolio" class="btn btn-default btn-xl sr-button">portfolio</a>
+                    <h2>Chcesz zrealiować projekt?</h2>
+                    <a href="/portfolio" class="btn btn-default btn-xl sr-button">skontaktuj się</a>
                 </div>
             </div>
         </aside>

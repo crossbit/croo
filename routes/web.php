@@ -12,14 +12,11 @@
  */
 
 Route::resource('category', 'CategoryController');
-
+Route::resource('photo', 'PhotoController');
 Route::resource('portfolio', 'PortfolioController');
 Route::get('/portfolio/category/{categoryId}', ['uses' => 'PortfolioController@getPortfoliosCategory']);
-
 Route::get('/', ['uses' => 'HomeController@index']);
-
 Route::get('/about', ['uses' => 'HomeController@about']);
-
 Route::get('/contact', function() {
     return View::make('home.contact');
 });

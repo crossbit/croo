@@ -1,3 +1,3 @@
 
 
-<img src= '{{$result->img_path}}'>
+{{dump ($result->photos)}}
