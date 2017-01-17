@@ -13,18 +13,18 @@
         <title>Creative - Start Bootstrap Theme</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ asset ('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
         <!-- Custom Fonts -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="{{ asset ('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
         <!-- Plugin CSS -->
-        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="{{ asset ('vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="css/creative.css" rel="stylesheet">
+        <link href="{{ asset ('css/creative.css')}}" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -44,26 +44,26 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <img src="img/logo.png" style="width:80%; height:auto;">
+                    <img src="{{ asset ('img/logo.png')}}" style="width:80%; height:auto;">
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" >
                         <li>
                             <a  href="/">Home</a>
                         </li>
                         <li>
-                            <a  href="/about">O nas</a>
+                            <a  href="/about" style="color:#222222 !important;">O nas</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/portfolio">Portfolio</a>
+                            <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career">Kariera</a>
+                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/contact">Kontakt</a>
+                            <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
                         </li>
                     </ul>
                 </div>

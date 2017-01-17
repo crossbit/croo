@@ -48,21 +48,21 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a  href="/">Home</a>
+                            <a  href="/" style="color:#222222;">Home</a>
                         </li>
                         <li>
-                            <a  href="/about">O nas</a>
+                            <a  href="/about" style="color:#222222 !important;">O nas</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/portfolio">Portfolio</a>
+                            <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career">Kariera</a>
+                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/contact">Kontakt</a>
+                            <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
                         </li>
                     </ul>
                 </div>

@@ -12,18 +12,18 @@
         <title>Creative - Start Bootstrap Theme</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ asset ('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
         <!-- Custom Fonts -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="{{ asset ('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
         <!-- Plugin CSS -->
-        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="{{ asset ('vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="css/creative.css" rel="stylesheet">
+        <link href="{{ asset ('css/creative.css')}}" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -43,7 +43,7 @@
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <img src="img/logo.png" style="width:80%; height:auto;">
+                    <img src="{{ asset ('img/logo.png')}}" style="width:80%; height:auto;">
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,12 +70,47 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
+        <section id="services">
 
+            @foreach ($result as $item)
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">{{$item->name}}</h2>
+                        <hr class="primary">
+                    </div>
+                </div>
+            </div>
 
-        <section class="no-padding" id="portfolio" style="padding-top:3%;">
+                <div class="row">
+                    <div class="col-lg-12  text-center">
+                        <p>{{$item->description}}</p>
+
+                    </div>
+                </div>
+
+        </section>
+
+        <section class="no-padding" id="portfolio" style="padding-top:4%;">
             <div class="container-fluid">
                 <div class="row no-gutter ">
-\
+
+                    @foreach($item->photos as $photo)
+
+                    <div class="col-lg-4 col-sm-6" style="min-height:36.8vh; background-image:url('{{$photo->thumbnail}}'); background-size: cover;">
+                        <a href="#" class="portfolio-box" style="min-height:36.8vh;">
+                            <div class="portfolio-box-caption" >
+                                <div class="portfolio-box-caption-content">
+                                    <div class="project-name">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                    @endforeach
+                    @endforeach
                 </div>
             </div>
         </section>

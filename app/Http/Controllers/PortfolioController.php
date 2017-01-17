@@ -51,8 +51,8 @@ class PortfolioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id) {
-        $result = Portfolio::findOrFail($id);
-        $result->with('photos')->get();
+        $result = Portfolio::with('photos')->where('id', '=', $id)->get();
+        
         return view('portfolio.show')->with('result', $result);
     }
     /**
