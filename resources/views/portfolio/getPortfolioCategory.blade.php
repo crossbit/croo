@@ -1,0 +1,3 @@
+działa
+
+{{dump($portfolios)}}
