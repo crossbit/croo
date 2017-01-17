@@ -100,7 +100,9 @@ class PortfolioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function getPortfoliosCategory($categoryId) {
-        $portfolios = DB::select('select * from portfolios where category_id = category_id', ['category_id' => $categoryId]);
+
+         $portfolios = Portfolio::with('photos')->where('category_id', '=', $categoryId)->get();
+         
         return view('portfolio.getPortfolioCategory', ['portfolios' => $portfolios]);
     }
 }
