@@ -123,7 +123,7 @@
                     </div>
                     <div class="col-lg-4  text-center">
                         <div class="service-box">
-                            <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+                            <i class="fa fa-4x fa fa-times text-primary sr-icons"></i>
                             <h3>Nowoczesne rozwiązania</h3>
                             <p class="text-muted">Trzymamy rękę na pulsie i wdrażamy aktualne i najlepsze rozwiązania technologiczne.</p>
                         </div>

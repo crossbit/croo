@@ -475,3 +475,9 @@ body {
         margin-right: auto;
     }
 }
+
+#portfolioName{
+    font-size: 50px;
+    text-transform: uppercase;
+    color:#fff;
+}

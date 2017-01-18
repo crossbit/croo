@@ -34,9 +34,9 @@
 
     </head>
 
-    <body id="page-top">
+    <body id="page-top" style="background-color: #C60113;">
 
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff; ">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -48,21 +48,21 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a  href="/">Home</a>
+                    <ul class="nav navbar-nav navbar-right" style="color:#222222;">
+                         <li>
+                            <a  href="/" style="color:#222222;">Home</a>
                         </li>
                         <li>
-                            <a  href="/about">O nas</a>
+                            <a  href="/about" style="color:#222222 !important;">O nas</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/portfolio">Portfolio</a>
+                            <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career">Kariera</a>
+                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/contact">Kontakt</a>
+                            <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -70,51 +70,42 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <section id="services">
+        <section class="no-padding">
 
             @foreach ($result as $item)
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="section-heading">{{$item->name}}</h2>
-                        <hr class="primary">
-                    </div>
-                </div>
-            </div>
-
-                <div class="row">
-                    <div class="col-lg-12  text-center">
-                        <p>{{$item->description}}</p>
-
-                    </div>
-                </div>
-
-        </section>
-
-        <section class="no-padding" id="portfolio" style="padding-top:4%;">
             <div class="container-fluid">
-                <div class="row no-gutter ">
+                <div class="row no-gutter " style="padding-top:1%;">
+                    <div class="col-sm-6" >
+                        <div class="portfolio-slideshow">
+                            <!-- Image Carousel -->
+                            <div id="portfolio-slideshow" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
 
-                    @foreach($item->photos as $photo)
-
-                    <div class="col-lg-4 col-sm-6" style="min-height:36.8vh; background-image:url('{{$photo->thumbnail}}'); background-size: cover;">
-                        <a href="#" class="portfolio-box" style="min-height:36.8vh;">
-                            <div class="portfolio-box-caption" >
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-name">
+                                <!-- Wrapper for slides -->
+                                <div >
+                                    @foreach($item->photos->slice(0, 1) as $photo)
+                                    <div style="min-height:100vh; background-image:url('{{$photo->img}}'); background-size: cover;">
 
                                     </div>
+                                    @endforeach
                                 </div>
                             </div>
-                        </a>
-
+                        </div>
                     </div>
-                    @endforeach
-                    @endforeach
-                </div>
-            </div>
+                    <div class="col-sm-6 header-content-inner" style="padding-left:1%; padding-right:1%; color:rgba(255, 255, 255, 0.7);">
+                        <a href="/portfolio"  style="margin-left:90%; "> <i class="fa fa-4x fa fa-times text-primary sr-icons" style="margin-top:10%;"></i></a>
+                        <h1 id="portfolioName" style="padding-top:20%; ">{{$item->name}}</h1>
+                        <p style="text-align: justify; padding-top:5%; padding-bottom: 10%;">{{$item->description}}</p>
+                        
+                    </div>
+                </div> <!-- / .row -->
+                
+            </div> <!-- / .container -->
+
         </section>
 
+  
+ @endforeach
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
