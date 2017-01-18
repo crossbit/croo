@@ -49,7 +49,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" style="color:#222222;">
-                         <li>
+                        <li>
                             <a  href="/" style="color:#222222;">Home</a>
                         </li>
                         <li>
@@ -80,14 +80,58 @@
                             <!-- Image Carousel -->
                             <div id="portfolio-slideshow" class="carousel slide" data-ride="carousel">
                                 <!-- Indicators -->
-
+                                <ol class="carousel-indicators">
+                                    <li data-target="#portfolio-slideshow" data-slide-to="0" class="active"></li>
+                                    <li data-target="#portfolio-slideshow" data-slide-to="1"></li>
+                                    <li data-target="#portfolio-slideshow" data-slide-to="2"></li>
+                                </ol>
                                 <!-- Wrapper for slides -->
-                                <div >
-                                    @foreach($item->photos->slice(0, 1) as $photo)
-                                    <div style="min-height:100vh; background-image:url('{{$photo->img}}'); background-size: cover;">
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img src="img/general-1.jpg" class="img-responsive" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/general-2.jpg" class="img-responsive" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/general-3.jpg" class="img-responsive" alt="...">
+                                    </div>
+                                    <div class="item">
+                                        <img src="img/general-4.jpg" class="img-responsive" alt="...">
+                                    </div>
+                                </div>
+                                <!-- Controls -->
+                                <a class="carousel-arrow carousel-arrow-prev" href="#portfolio-slideshow" data-slide="prev">
+                                    <i class="fa fa-angle-left"></i>
+                                </a>
+                                <a class="carousel-arrow carousel-arrow-next" href="#portfolio-slideshow" data-slide="next">
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-slideshow">
+                            <!-- Image Carousel -->
+                            <div id="portfolio-slideshow" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#portfolio-slideshow" data-slide-to="0" class="active"></li>
+                                    <li data-target="#portfolio-slideshow" data-slide-to="1"></li>
+                                    <li data-target="#portfolio-slideshow" data-slide-to="2"></li>
+                                </ol>
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner">
+                                    @foreach($item->photos->slice(0,1) as $photo)
+                                    <div class="item active" style="min-height:100vh; background-image:url('{{$photo->img}}'); background-size: cover;">
 
                                     </div>
                                     @endforeach
+
+                                    @foreach($item->photos->slice(1,4) as $photo)
+                                    <div class="item" style="min-height:100vh; background-image:url('{{$photo->img}}'); background-size: cover;">
+
+                                    </div>
+                                    @endforeach
+
                                 </div>
                             </div>
                         </div>
@@ -96,16 +140,16 @@
                         <a href="/portfolio"  style="margin-left:90%; "> <i class="fa fa-4x fa fa-times text-primary sr-icons" style="margin-top:10%;"></i></a>
                         <h1 id="portfolioName" style="padding-top:20%; ">{{$item->name}}</h1>
                         <p style="text-align: justify; padding-top:5%; padding-bottom: 10%;">{{$item->description}}</p>
-                        
+
                     </div>
                 </div> <!-- / .row -->
-                
+
             </div> <!-- / .container -->
 
         </section>
 
-  
- @endforeach
+
+        @endforeach
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
@@ -115,23 +159,22 @@
             </div>
         </aside>
 
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
+        <footer class="footer-distributed">
 
-                    </div>
-                    <div class="col-lg-4 col-lg-offset-2 text-center">
-                        <i class="fa fa-phone fa-3x sr-contact"></i>
-                        <p>123-456-6789</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                        <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                    </div>
-                </div>
+            <div class="footer-left">
+
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">O nas</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Kariera</a>
+                    <a href="#">Kontakt</a>
+                </p>
+
+                <p>CROO S.A. &copy; 2017</p>
             </div>
-        </section>
+
+        </footer>
 
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>

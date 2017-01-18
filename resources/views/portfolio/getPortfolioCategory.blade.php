@@ -37,7 +37,7 @@
 
     <body id="page-top">
 
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff;">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -72,8 +72,14 @@
             <!-- /.container-fluid -->
         </nav>
 
-
-        <section class="no-padding" id="portfolio" style="padding-top:3%;">
+        <section style="background-color: #E30713; min-height: 40vh">
+            <div class="container">
+                <div class="row">
+                    <h1 id="portfolioName" style="padding-top:5%; text-align: center;">{{$category->name}}</h1>
+                </div>
+            </div>
+        </section>
+        <section class="no-padding" id="portfolio" style="padding-top:1%; ">
             <div class="container-fluid">
                 <div class="row no-gutter ">
 
@@ -98,11 +104,11 @@
             </div>
         </section>
 
-        <aside class="bg-dark">
+           <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
-                    <h2>Chcesz zrealiować projekt?</h2>
-                    <a href="/portfolio" class="btn btn-default btn-xl sr-button">skontaktuj się</a>
+                    <h2>Zobacz wszystkie nasze projekty</h2>
+                    <a href="/portfolio" class="btn btn-default btn-xl sr-button">portfolio</a>
                 </div>
             </div>
         </aside>

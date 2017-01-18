@@ -102,7 +102,8 @@ class PortfolioController extends Controller {
     public function getPortfoliosCategory($categoryId) {
 
          $portfolios = Portfolio::with('photos')->where('category_id', '=', $categoryId)->get();
+         $category = Category::findOrFail($categoryId);
          
-        return view('portfolio.getPortfolioCategory', ['portfolios' => $portfolios]);
+        return view('portfolio.getPortfolioCategory', ['portfolios' => $portfolios, 'category' => $category]);
     }
 }

@@ -36,33 +36,33 @@
 
     <body id="page-top">
 
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff;">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <img src="img/logo.png" style="width:80%; height:auto;">
+                    <img src="{{ asset ('img/logo.png')}}" style="width:80%; height:auto;">
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a  href="/">Home</a>
+                            <a  href="/" style="color:#222222 !important;">Home</a>
                         </li>
                         <li>
-                            <a  href="/about">O nas</a>
+                            <a  href="/about" style="color:#222222 !important;">O nas</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/portfolio">Portfolio</a>
+                            <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career">Kariera</a>
+                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/contact">Kontakt</a>
+                            <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -169,23 +169,22 @@
             </div>
         </aside>
 
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
+<footer class="footer-distributed">
 
-                    </div>
-                    <div class="col-lg-4 col-lg-offset-2 text-center">
-                        <i class="fa fa-phone fa-3x sr-contact"></i>
-                        <p>123-456-6789</p>
-                    </div>
-                    <div class="col-lg-4 text-center">
-                        <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                        <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">O nas</a>
+                <a href="#">Portfolio</a>
+                <a href="#">Kariera</a>
+                <a href="#">Kontakt</a>
+            </p>
+
+            <p>CROO S.A. &copy; 2017</p>
+        </div>
+
+    </footer>
 
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>
