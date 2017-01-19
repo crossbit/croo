@@ -59,7 +59,7 @@
                             <a class="page-scroll" href="/portfolio">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career">Kariera</a>
+                            <a class="page-scroll" href="/recruitment">Kariera</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="/contact">Kontakt</a>
