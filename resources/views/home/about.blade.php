@@ -36,7 +36,7 @@
 
     <body id="page-top">
 
-         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff;">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff;">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -71,31 +71,26 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <header id= "aboutPage">
-            <div class="header-content">
-                <div class="header-content-inner">
-                    <h1 id="homeHeading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h1>
-                    <hr>
-                    <p>CROO znaczy zespół - jesteśmy profesjonalistami, ale przede wszystkim pasjonatami nowych technologii</p>
-                    <a href="#about" class="btn btn-primary btn-xl page-scroll">Sprawdź</a>
-                </div>
-            </div>
-        </header>
+      
+        <aside class="bg-dark" style="background-color: white; padding:2vh;">
 
-        <section class="bg-primary" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
-                        <hr class="light">
-                        <p class="text-faded">
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                        </p>
-                    </div>
-                </div>
+        </aside>
+
+
+        <section class="bg-primary" id="about" style=" height:60vh; padding:0; ">
+            <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
+
+            </div>
+            <div class="col-lg-6  text-center" style="padding-top:10%;">
+                <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
+                <hr class="light">
+                <p class="text-faded">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
+                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                </p>
+                <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
             </div>
         </section>
+
 
         <section id="services">
             <div class="container">
@@ -129,7 +124,7 @@
                 </div>
             </div>
         </section>
-       
+
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
@@ -169,22 +164,22 @@
             </div>
         </aside>
 
-<footer class="footer-distributed">
+        <footer class="footer-distributed">
 
-        <div class="footer-left">
+            <div class="footer-left">
 
-            <p class="footer-links">
-                <a href="#">Home</a>
-                <a href="#">O nas</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Kariera</a>
-                <a href="#">Kontakt</a>
-            </p>
+                <p class="footer-links">
+                    <a href="#">Home</a>
+                    <a href="#">O nas</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Kariera</a>
+                    <a href="#">Kontakt</a>
+                </p>
 
-            <p>CROO S.A. &copy; 2017</p>
-        </div>
+                <p>CROO S.A. &copy; 2017</p>
+            </div>
 
-    </footer>
+        </footer>
 
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>

@@ -36,33 +36,33 @@
 
     <body id="page-top">
 
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff;">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <img src="img/logo.png" style="width:80%; height:auto;">
+                    <img src="{{ asset ('img/logo.png')}}" style="width:80%; height:auto;">
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a  href="/">Home</a>
+                            <a  href="/" style="color:#222222 !important;">Home</a>
                         </li>
                         <li>
-                            <a  href="/about">O nas</a>
+                            <a  href="/about" style="color:#222222 !important;">O nas</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/portfolio">Portfolio</a>
+                            <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/recruitment">Kariera</a>
+                            <a class="page-scroll" href="/recruitment" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/contact">Kontakt</a>
+                            <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -81,22 +81,27 @@
                 </div>
             </div>
         </header>
+        
+        <aside class="bg-dark" style="background-color: white; padding:2vh;">
 
-        <section class="bg-primary" id="about">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
-                        <hr class="light">
-                        <p class="text-faded">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
-                            stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
-                        <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
-                    </div>
-                </div>
+        </aside>
+        
+        
+        <section class="bg-primary" id="about" style=" height:60vh; padding:0;">
+            <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
+
+            </div>
+            <div class="col-lg-6  text-center" style="padding-top:10%;">
+                <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
+                <hr class="light">
+                <p class="text-faded">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
+                    stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
+                <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
             </div>
         </section>
 
-       <section id="services">
+        
+        <section id="services">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -154,7 +159,7 @@
             </div>
         </section>
 
-         <aside class="bg-dark">
+        <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
                     <h2>Zobacz wszystkie nasze projekty</h2>

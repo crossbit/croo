@@ -70,44 +70,49 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <aside class="bg-dark" style="background-color: white; padding:2vh;">
+        <section class="no-padding">
 
-        </aside>
-
-
-        <section class="bg-primary" id="about" style=" height:60vh; padding:0;">
-            <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
-
-            </div>
-            <div class="col-lg-6  text-center" style="padding-top:10%;">
-                <h2 class="section-heading">DOŁĄCZ DO NASZEGO ZESPOŁU</h2>
-                <hr class="light">
-                <p class="text-faded">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                </p>
-                <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
-            </div>
-        </section>
-
-        <section class="no-padding" id="portfolio" style="background-color:white;">
+            @foreach ($recruitment as $recruit)
             <div class="container-fluid">
-                <div class="row no-gutter ">
-                    @foreach ($recruitments as $recruitment)
-                    <div class="col-lg-4 col-sm-6 text-center" style="margin-top:3%; margin-bottom: 5%;">
-                        <i class="fa fa-4x fa-briefcase text-primary sr-icons" aria-hidden="true"></i>
-                        <h2  style="color:#222222; padding-bottom: 8%;" >{{$recruitment->name}}</h2>
-                        <a href="/recruitment/{{$recruitment->id}}" class="page-scroll btn btn-default btn-xl sr-button" style="background-color: #E30713; color:white; padding-top:2%;">Poznaj ofertę!</a>
+                <div class="row no-gutter " style="padding-top:1%;">
+                    <div class="col-sm-6" >
+                        <div id= "photo" class="item active">
 
+                        </div> 
                     </div>
-                    @endforeach
+                    <div class="col-sm-6 header-content-inner" style="padding-left:1%; padding-right:1%; color:rgba(255, 255, 255, 0.7);">
+                        <a href="/recruitment"  style="margin-left:90%; "> <i class="fa fa-4x fa fa-times text-primary sr-icons" style="margin-top:7%;"></i></a>
+                        <h1 id="portfolioName" style="padding-top:3%; ">{{$recruit->name}}</h1>
 
-                </div>
-            </div>
+                        <h2 style="text-align: justify; padding-top:2%; padding-bottom: 1%; color:white;">Wymagania:</h2>
+                        @foreach($recruit->needs as $need)
+                        <li style="font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; list-style-type: none;">{{$need->name}}</li>
+                        @endforeach
+
+                        <h2 style="text-align: justify; padding-top:1%; padding-bottom: 1%; color:white;">Zadania:</h2>
+                        @foreach($recruit->tasks as $task)
+                        <li style="font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; list-style-type: none;">{{$task->name}}</li>
+                        @endforeach
+
+
+                        <h2 style="text-align: justify; padding-top:1%; padding-bottom: 1%; color:white;">Oferujemy:</h2>
+                        @foreach($recruit->offers as $offer)
+                        <li style="font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; list-style-type: none;">{{$offer->name}}</li>
+                        @endforeach
+
+                        <p style="text-align: justify; padding-top:7%; padding-bottom: 1%; font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;">Osoby zainteresowane prosimy o 
+                            przesłanie swojego CV na adres rekrutacja@croo.com.pl. Prosimy o zwarcie klauzuli: 
+                            Wyrażam zgodę na przetwarzanie przez CROO SA moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych do realizacji 
+                            procesu rekrutacji zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tj. Dz. U. z 2014 r. poz. 1182, 1662). </p>
+                    </div>
+                </div> <!-- / .row -->
+
+            </div> <!-- / .container -->
+
         </section>
 
 
-
-
+        @endforeach
         <aside class="bg-dark">
             <div class="container text-center">
                 <div class="call-to-action">
@@ -151,4 +156,5 @@
     </body>
 
 </html>
+
 

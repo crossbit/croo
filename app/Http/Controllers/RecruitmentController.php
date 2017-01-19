@@ -1,20 +1,18 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Recruitment;
 
-class RecruitmentController extends Controller
-{
+class RecruitmentController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index() {
         $recruitments = Recruitment::with('tasks')->with('needs')->with('offers')->get();
         return view('recruitment.index')
                         ->with('recruitments', $recruitments);
@@ -25,9 +23,9 @@ class RecruitmentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create() {
+
+        return view('recruitment.create');
     }
 
     /**
@@ -36,9 +34,11 @@ class RecruitmentController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request) {
+
+        $result = Recruitment::create($request->all());
+
+        return redirect()->route('recruitment.show', ['id' => $result->id]);
     }
 
     /**
@@ -47,9 +47,10 @@ class RecruitmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
+    public function show($id) {
+        $recruitment = Recruitment::with('tasks')->with('needs')->with('offers')->where('id', '=', $id)->get();
+
+        return view('recruitment.show')->with('recruitment', $recruitment);
     }
 
     /**
@@ -58,8 +59,7 @@ class RecruitmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
+    public function edit($id) {
         //
     }
 
@@ -70,8 +70,7 @@ class RecruitmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request, $id) {
         //
     }
 
@@ -81,10 +80,8 @@ class RecruitmentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
+    public function destroy($id) {
         //
     }
+
 }
-
-

@@ -533,3 +533,7 @@ body {
         line-height: 1.8;
     }
 }
+
+#photo{
+    min-height:120vh;  background-image:url('../img/comp.jpg'); background-size: cover;
+}

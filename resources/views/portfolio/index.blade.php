@@ -36,7 +36,7 @@
 
     <body id="page-top">
 
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -71,8 +71,26 @@
             <!-- /.container-fluid -->
         </nav>
 
+        <aside class="bg-dark" style="background-color: white; padding:2vh;">
 
-        <section class="no-padding" id="portfolio" style="padding-top:3%;">
+        </aside>
+
+
+        <section class="bg-primary" id="about" style=" height:60vh; padding:0;">
+            <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
+
+            </div>
+            <div class="col-lg-6  text-center" style="padding-top:10%;">
+                <h2 class="section-heading" style="text-transform: uppercase;">Lorem ipsum dolor sit amet</h2>
+                <hr class="light">
+                <p class="text-faded">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
+                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+                </p>
+                <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
+            </div>
+        </section>
+        
+        <section class="no-padding" id="portfolio" style="padding-top:0.1%;">
             <div class="container-fluid">
                 <div class="row no-gutter ">
 
