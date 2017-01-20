@@ -81,26 +81,30 @@
                 </div>
             </div>
         </header>
-        
-        <aside class="bg-dark" style="background-color: white; padding:2vh;">
+
+        <aside class="bg-white">
 
         </aside>
-        
-        
-        <section class="bg-primary" id="about" style=" height:60vh; padding:0;">
-            <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
 
-            </div>
-            <div class="col-lg-6  text-center" style="padding-top:10%;">
-                <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
-                <hr class="light">
-                <p class="text-faded">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
-                    stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
-                <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
+
+        <section class="bg-primary" id="about">
+            <div class="container-fluid">
+                <div class="row no-gutter">
+                    <div class="col-lg-6 image">
+
+                    </div>
+                    <div class="col-lg-6 div-padding text-center">
+                        <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
+                        <hr class="light">
+                        <p class="text-faded margin">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
+                            stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
+                        <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
+                    </div>
+                </div>
             </div>
         </section>
 
-        
+
         <section id="services">
             <div class="container">
                 <div class="row">
@@ -182,11 +186,24 @@
                     </div>
                     <div class="col-lg-4 text-center">
                         <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                        <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
+                        <p><a href="mailto:your-email@your-domain.com">kontakt@croo.com.pl</a></p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a href="/">Home</a>
+                    <a href="/about">O nas</a>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/recruitment">Kariera</a>
+                    <a href="/contact">Kontakt</a>
+                </p>
+                <p>CROO S.A. &copy; 2017</p>
+            </div>
+        </footer>
 
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>

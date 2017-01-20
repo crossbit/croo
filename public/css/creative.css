@@ -9,7 +9,8 @@ body {
     width: 100%;
 }
 body {
-    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+
 }
 hr {
     border-color: #E30713;
@@ -27,7 +28,7 @@ a {
 }
 a:hover,
 a:focus {
-    color: #eb3812;
+    color: #C60113;
 }
 h1,
 h2,
@@ -41,6 +42,7 @@ p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 .bg-primary {
     background-color: #E30713;
@@ -48,6 +50,12 @@ p {
 .bg-dark {
     background-color: #222222;
     color: white;
+}
+
+.bg-white {
+    background-color: white;
+    color: #222222;
+    padding:2vh;
 }
 .text-faded {
     color: rgba(255, 255, 255, 0.7);
@@ -180,6 +188,7 @@ header .header-content .header-content-inner p {
     font-size: 16px;
     margin-bottom: 50px;
 }
+
 @media (min-width: 768px) {
     header {
         min-height: 100%;
@@ -201,7 +210,8 @@ header .header-content .header-content-inner p {
         font-size: 50px;
     }
     header .header-content .header-content-inner p {
-        font-size: 18px;
+        font-size: 2em;
+        font-weight: 500;
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -483,7 +493,7 @@ body {
 }
 
 .footer-distributed{
-    background-color: black;
+    background-color: #222222;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;
@@ -501,7 +511,7 @@ body {
 /* Footer links */
 
 .footer-distributed p.footer-links{
-    font-size:18px;
+    font-size:15px;
     font-weight: bold;
     color:  #ffffff;
     margin: 0 0 10px;
@@ -536,4 +546,24 @@ body {
 
 #photo{
     min-height:120vh;  background-image:url('../img/comp.jpg'); background-size: cover;
+}
+
+.image{
+    background-image: url('../img/comp.jpg'); 
+    background-size: cover; 
+    height:70vh;
+}
+
+.margin{
+    margin-left: 8%;
+    margin-right:8%;
+}
+
+.div-padding{
+    padding-top:10%; 
+    padding-bottom: 10%;
+}
+
+#about{
+    padding:0;
 }

@@ -59,7 +59,7 @@
                             <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
+                            <a class="page-scroll" href="/recruitment" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
@@ -71,23 +71,26 @@
             <!-- /.container-fluid -->
         </nav>
 
-      
-        <aside class="bg-dark" style="background-color: white; padding:2vh;">
+
+        <aside class="bg-dark" style="background-color: white; padding:5vh;">
 
         </aside>
 
 
-        <section class="bg-primary" id="about" style=" height:60vh; padding:0; ">
-            <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
+        <section class="bg-primary" id="about" style="  padding:0;">
+            <div class="container-fluid">
+                <div class="row no-gutter">
+                    <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
 
-            </div>
-            <div class="col-lg-6  text-center" style="padding-top:10%;">
-                <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
-                <hr class="light">
-                <p class="text-faded">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-                    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-                </p>
-                <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
+                    </div>
+                    <div class="col-lg-6  text-center" style="padding-top:10%; padding-bottom: 10%;">
+                        <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
+                        <hr class="light">
+                        <p class="text-faded">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
+                            stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
+                        <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
+                    </div>
+                </div>
             </div>
         </section>
 
