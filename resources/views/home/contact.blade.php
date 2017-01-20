@@ -50,7 +50,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right" >
                         <li>
-                            <a  href="/">Home</a>
+                            <a  href="/" style="color:#222222 !important;">Home</a>
                         </li>
                         <li>
                             <a  href="/about" style="color:#222222 !important;">O nas</a>
@@ -71,7 +71,7 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <header style="height:80vh;">
+        <header id="contact">
             <div class="header-content">
                 <!-- Wrapper -->
                 <div class="wrapper">
@@ -124,7 +124,7 @@
                                         <h3 class="headline second-child">Zadzwoń</h3>
                                         <p>
                                             Telefon: +48 518 966 632<br />
-                                            Email: <a href="#">kontakt@croo.com.pl</a>
+                                            Email: <a href="#" style="color:#fff !important; font-weight: 800;">kontakt@croo.com.pl</a>
                                         </p>
                                     </div>
                                     <br/>
@@ -136,7 +136,7 @@
                                             1987 Lincoln Street<br />
                                             Phone: +0 000 000 00 00<br />
                                             Fax: +0 000 000 00 00<br />
-                                            Email: <a href="#">admin@mysite.com</a>
+                                            Email: <a href="#" style="color:#fff !important; font-weight: 800;">admin@mysite.com</a>
                                         </p>
                                     </div>
                                 </div>

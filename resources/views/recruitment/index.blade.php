@@ -34,7 +34,7 @@
 
     </head>
 
-    <body id="page-top" style="background-color: #C60113;">
+    <body id="page-top">
 
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff; ">
             <div class="container-fluid">
@@ -59,7 +59,7 @@
                             <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
+                            <a class="page-scroll" href="/recruitment" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
@@ -70,21 +70,21 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-        <aside class="bg-dark" style="background-color: white; padding:2vh;">
+        <aside class="bg-white">
 
         </aside>
 
 
-        <section class="bg-primary" id="about" style="  padding:0;">
+         <section class="bg-primary" id="about">
             <div class="container-fluid">
                 <div class="row no-gutter">
-                    <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
+                    <div class="col-lg-6 image">
 
                     </div>
-                    <div class="col-lg-6  text-center" style="padding-top:10%; padding-bottom: 10%;">
+                    <div class="col-lg-6 div-padding text-center">
                         <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
                         <hr class="light">
-                        <p class="text-faded">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
+                        <p class="text-faded margin">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
                             stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
                         <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
                     </div>
@@ -92,13 +92,13 @@
             </div>
         </section>
 
-        <section class="no-padding" id="portfolio" style="background-color:white;">
+        <section class="no-padding" id="recruitment">
             <div class="container-fluid">
                 <div class="row no-gutter ">
                     @foreach ($recruitments as $recruitment)
-                    <div class="col-lg-4 col-sm-6 text-center" style="margin-top:3%; margin-bottom: 5%;">
+                    <div class="col-lg-4 text-center" style="">
                         <i class="fa fa-4x fa-briefcase text-primary sr-icons" aria-hidden="true"></i>
-                        <h2  style="color:#222222; padding-bottom: 8%;" >{{$recruitment->name}}</h2>
+                        <h2  style="" >{{$recruitment->name}}</h2>
                         <a href="/recruitment/{{$recruitment->id}}" class="page-scroll btn btn-default btn-xl sr-button" style="background-color: #E30713; color:white; padding-top:2%;">Poznaj ofertę!</a>
 
                     </div>
@@ -107,9 +107,6 @@
                 </div>
             </div>
         </section>
-
-
-
 
         <aside class="bg-dark">
             <div class="container text-center">
@@ -121,20 +118,16 @@
         </aside>
 
         <footer class="footer-distributed">
-
             <div class="footer-left">
-
                 <p class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">O nas</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Kariera</a>
-                    <a href="#">Kontakt</a>
+                    <a href="/">Home</a>
+                    <a href="/about">O nas</a>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/recruitment">Kariera</a>
+                    <a href="/contact">Kontakt</a>
                 </p>
-
                 <p>CROO S.A. &copy; 2017</p>
             </div>
-
         </footer>
 
         <!-- jQuery -->

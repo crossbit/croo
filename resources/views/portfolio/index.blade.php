@@ -71,21 +71,21 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <aside class="bg-dark" style="background-color: white; padding:2vh;">
+        <aside class="bg-white">
 
         </aside>
 
 
-        <section class="bg-primary" id="about" style="  padding:0;">
+        <section class="bg-primary" id="about">
             <div class="container-fluid">
                 <div class="row no-gutter">
-                    <div class="col-lg-6 text-center" style=" background-image: url('img/comp.jpg'); background-size: cover; height:60vh;">
+                    <div class="col-lg-6 image">
 
                     </div>
-                    <div class="col-lg-6  text-center" style="padding-top:10%; padding-bottom: 10%;">
+                    <div class="col-lg-6 div-padding text-center">
                         <h2 class="section-heading">JESTEŚMY AGENCJĄ KREATYWNĄ</h2>
                         <hr class="light">
-                        <p class="text-faded">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
+                        <p class="text-faded margin">Oferujemy pełne wsparcie dla Twojego bizneu. Nasze projekty to połączenie wielkich ideii i cyfrowych technik 
                             stosowanych do ich realizacji. Tworzymy dedykowane rozwiązania- aplikacje www, kampanie marketingowe, aplikacje mobilne... i wiele więcej.</p>
                         <a href="/about" class="page-scroll btn btn-default btn-xl sr-button">Poznaj nas!</a>
                     </div>
@@ -93,14 +93,13 @@
             </div>
         </section>
 
-        <section class="no-padding" id="portfolio" style="padding-top:0.1%;">
+        <section class="no-padding" id="portfolio" >
             <div class="container-fluid">
                 <div class="row no-gutter ">
-
                     @foreach ($portfolios as $portfolio)
                     @foreach($portfolio->photos->slice(0, 1) as $photo)
-                    <div class="col-lg-4 col-sm-6" style="min-height:36.8vh; background-image:url('{{$photo->thumbnail}}'); background-size: cover;">
-                        <a href="/portfolio/{{$portfolio->id}}" class="portfolio-box" style="min-height:36.8vh;">
+                    <div class="col-lg-4 col-sm-6 portfolio-image" style="background-image:url('{{$photo->thumbnail}}');">
+                        <a href="/portfolio/{{$portfolio->id}}" class="portfolio-box portfolio-image">
                             <div class="portfolio-box-caption" >
                                 <div class="portfolio-box-caption-content">
                                     <div class="project-name">
@@ -113,7 +112,6 @@
                     </div>
                     @endforeach
                     @endforeach
-
                 </div>
             </div>
         </section>
@@ -127,21 +125,17 @@
             </div>
         </aside>
 
-        <footer class="footer-distributed">
-
+         <footer class="footer-distributed">
             <div class="footer-left">
-
                 <p class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">O nas</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Kariera</a>
-                    <a href="#">Kontakt</a>
+                    <a href="/">Home</a>
+                    <a href="/about">O nas</a>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/recruitment">Kariera</a>
+                    <a href="/contact">Kontakt</a>
                 </p>
-
                 <p>CROO S.A. &copy; 2017</p>
             </div>
-
         </footer>
 
         <!-- jQuery -->
