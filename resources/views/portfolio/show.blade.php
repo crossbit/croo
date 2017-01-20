@@ -34,7 +34,7 @@
 
     </head>
 
-    <body id="page-top" style="background-color: #C60113;">
+    <body id="page-top" style="">
 
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff; ">
             <div class="container-fluid">
@@ -59,7 +59,7 @@
                             <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
+                            <a class="page-scroll" href="/recruitment" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
@@ -74,7 +74,7 @@
 
             @foreach ($result as $item)
             <div class="container-fluid">
-                <div class="row no-gutter " style="padding-top:1%;">
+                <div class="row no-gutter portfolio-show">
                     <div class="col-sm-6" >
                         <div class="portfolio-slideshow">
                             <!-- Image Carousel -->
@@ -119,15 +119,15 @@
                                     <li data-target="#portfolio-slideshow" data-slide-to="2"></li>
                                 </ol>
                                 <!-- Wrapper for slides -->
-                                <div class="carousel-inner">
+                                <div class="carousel-inner show">
                                     @foreach($item->photos->slice(0,1) as $photo)
-                                    <div class="item active" style="min-height:100vh; background-image:url('{{$photo->img}}'); background-size: cover;">
+                                    <div class="item active show" style=" background-image:url('{{$photo->img}}');">
 
                                     </div>
                                     @endforeach
-
+                                    <!--carousel to do-->
                                     @foreach($item->photos->slice(1,4) as $photo)
-                                    <div class="item" style="min-height:100vh; background-image:url('{{$photo->img}}'); background-size: cover;">
+                                    <div class="item " style="background-image:url('{{$photo->img}}');">
 
                                     </div>
                                     @endforeach
@@ -136,10 +136,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 header-content-inner" style="padding-left:1%; padding-right:1%; color:rgba(255, 255, 255, 0.7);">
-                        <a href="/portfolio"  style="margin-left:90%; "> <i class="fa fa-4x fa fa-times text-primary sr-icons" style="margin-top:10%;"></i></a>
-                        <h1 id="portfolioName" style="padding-top:20%; ">{{$item->name}}</h1>
-                        <p style="text-align: justify; padding-top:5%; padding-bottom: 10%;">{{$item->description}}</p>
+                    <div class="col-sm-6 header-content-inner portfolio-text">
+                        <a href="/portfolio"> <i class="fa fa-4x fa fa-times text-primary sr-icons portfolio-icon"></i></a>
+                        <h1 id="portfolioName">{{$item->name}}</h1>
+                        <p>{{$item->description}}</p>
 
                     </div>
                 </div> <!-- / .row -->
@@ -160,22 +160,17 @@
         </aside>
 
         <footer class="footer-distributed">
-
             <div class="footer-left">
-
                 <p class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">O nas</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Kariera</a>
-                    <a href="#">Kontakt</a>
+                    <a href="/">Home</a>
+                    <a href="/about">O nas</a>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/recruitment">Kariera</a>
+                    <a href="/contact">Kontakt</a>
                 </p>
-
                 <p>CROO S.A. &copy; 2017</p>
             </div>
-
         </footer>
-
         <!-- jQuery -->
         <script src="vendor/jquery/jquery.min.js"></script>
 

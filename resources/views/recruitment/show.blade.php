@@ -34,7 +34,7 @@
 
     </head>
 
-    <body id="page-top" style="background-color: #C60113;">
+    <body id="page-top">
 
         <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff; ">
             <div class="container-fluid">
@@ -59,7 +59,7 @@
                             <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
+                            <a class="page-scroll" href="/recruitment" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
@@ -74,36 +74,35 @@
 
             @foreach ($recruitment as $recruit)
             <div class="container-fluid">
-                <div class="row no-gutter " style="padding-top:1%;">
+                <div class="row no-gutter portfolio-show">
                     <div class="col-sm-6" >
                         <div id= "photo" class="item active">
 
                         </div> 
                     </div>
-                    <div class="col-sm-6 header-content-inner" style="padding-left:1%; padding-right:1%; color:rgba(255, 255, 255, 0.7);">
-                        <a href="/recruitment"  style="margin-left:90%; "> <i class="fa fa-4x fa fa-times text-primary sr-icons" style="margin-top:7%;"></i></a>
-                        <h1 id="portfolioName" style="padding-top:3%; ">{{$recruit->name}}</h1>
+                    <div class="col-sm-6 header-content-inner portfolio-text">
+                        <a href="/recruitment"> <i class="fa fa-4x fa fa-times text-primary sr-icons portfolio-icon"></i></a>
+                        <h1 id="recruitmentName">{{$recruit->name}}</h1>
 
-                        <h2 style="text-align: justify; padding-top:2%; padding-bottom: 1%; color:white;">Wymagania:</h2>
+                        <h2>Wymagania:</h2>
                         @foreach($recruit->needs as $need)
-                        <li style="font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; list-style-type: none;">{{$need->name}}</li>
+                        <li>{{$need->name}}</li>
                         @endforeach
 
-                        <h2 style="text-align: justify; padding-top:1%; padding-bottom: 1%; color:white;">Zadania:</h2>
+                        <h2>Zadania:</h2>
                         @foreach($recruit->tasks as $task)
-                        <li style="font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; list-style-type: none;">{{$task->name}}</li>
+                        <li>{{$task->name}}</li>
                         @endforeach
 
 
-                        <h2 style="text-align: justify; padding-top:1%; padding-bottom: 1%; color:white;">Oferujemy:</h2>
+                        <h2>Oferujemy:</h2>
                         @foreach($recruit->offers as $offer)
-                        <li style="font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif; list-style-type: none;">{{$offer->name}}</li>
+                        <li>{{$offer->name}}</li>
                         @endforeach
 
-                        <p style="text-align: justify; padding-top:7%; padding-bottom: 1%; font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;">Osoby zainteresowane prosimy o 
-                            przesłanie swojego CV na adres rekrutacja@croo.com.pl. Prosimy o zwarcie klauzuli: 
+                        <h5>Osoby zainteresowane prosimy o przesłanie swojego CV na adres rekrutacja@croo.com.pl. Prosimy o zwarcie klauzuli: 
                             Wyrażam zgodę na przetwarzanie przez CROO SA moich danych osobowych zawartych w mojej ofercie pracy dla potrzeb niezbędnych do realizacji 
-                            procesu rekrutacji zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tj. Dz. U. z 2014 r. poz. 1182, 1662). </p>
+                            procesu rekrutacji zgodnie z ustawą z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (tj. Dz. U. z 2014 r. poz. 1182, 1662). </h5>
                     </div>
                 </div> <!-- / .row -->
 
@@ -122,21 +121,18 @@
             </div>
         </aside>
 
+        
         <footer class="footer-distributed">
-
             <div class="footer-left">
-
                 <p class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">O nas</a>
-                    <a href="#">Portfolio</a>
-                    <a href="#">Kariera</a>
-                    <a href="#">Kontakt</a>
+                    <a href="/">Home</a>
+                    <a href="/about">O nas</a>
+                    <a href="/portfolio">Portfolio</a>
+                    <a href="/recruitment">Kariera</a>
+                    <a href="/contact">Kontakt</a>
                 </p>
-
                 <p>CROO S.A. &copy; 2017</p>
             </div>
-
         </footer>
 
         <!-- jQuery -->
