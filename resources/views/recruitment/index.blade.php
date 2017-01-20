@@ -12,18 +12,18 @@
         <title>Creative - Start Bootstrap Theme</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ asset ('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
         <!-- Custom Fonts -->
-        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="{{ asset ('vendor/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" type="text/css">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
         <!-- Plugin CSS -->
-        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+        <link href="{{ asset ('vendor/magnific-popup/magnific-popup.css')}}" rel="stylesheet">
 
         <!-- Theme CSS -->
-        <link href="css/creative.css" rel="stylesheet">
+        <link href="{{ asset ('css/creative.css')}}" rel="stylesheet">
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,21 +34,21 @@
 
     </head>
 
-    <body id="page-top">
+    <body id="page-top" style="background-color: #C60113;">
 
-        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
+        <nav id="mainNav" class="navbar navbar-default navbar-fixed-top" style="background-color: #fff; ">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                     </button>
-                    <img src="img/logo.png" style="width:80%; height:auto;">
+                    <img src="{{ asset ('img/logo.png')}}" style="width:80%; height:auto;">
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right" >
+                    <ul class="nav navbar-nav navbar-right" style="color:#222222;">
                         <li>
                             <a  href="/" style="color:#222222;">Home</a>
                         </li>
@@ -59,7 +59,7 @@
                             <a class="page-scroll" href="/portfolio" style="color:#222222 !important;">Portfolio</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="/recruitment" style="color:#222222 !important;">Kariera</a>
+                            <a class="page-scroll" href="/career" style="color:#222222 !important;">Kariera</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="/contact" style="color:#222222 !important;">Kontakt</a>
@@ -70,7 +70,6 @@
             </div>
             <!-- /.container-fluid -->
         </nav>
-
         <aside class="bg-dark" style="background-color: white; padding:2vh;">
 
         </aside>
@@ -93,30 +92,24 @@
             </div>
         </section>
 
-        <section class="no-padding" id="portfolio" style="padding-top:0.1%;">
+        <section class="no-padding" id="portfolio" style="background-color:white;">
             <div class="container-fluid">
                 <div class="row no-gutter ">
-
-                    @foreach ($portfolios as $portfolio)
-                    @foreach($portfolio->photos->slice(0, 1) as $photo)
-                    <div class="col-lg-4 col-sm-6" style="min-height:36.8vh; background-image:url('{{$photo->thumbnail}}'); background-size: cover;">
-                        <a href="/portfolio/{{$portfolio->id}}" class="portfolio-box" style="min-height:36.8vh;">
-                            <div class="portfolio-box-caption" >
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-name">
-                                        {{$portfolio->name}}
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    @foreach ($recruitments as $recruitment)
+                    <div class="col-lg-4 col-sm-6 text-center" style="margin-top:3%; margin-bottom: 5%;">
+                        <i class="fa fa-4x fa-briefcase text-primary sr-icons" aria-hidden="true"></i>
+                        <h2  style="color:#222222; padding-bottom: 8%;" >{{$recruitment->name}}</h2>
+                        <a href="/recruitment/{{$recruitment->id}}" class="page-scroll btn btn-default btn-xl sr-button" style="background-color: #E30713; color:white; padding-top:2%;">Poznaj ofertę!</a>
 
                     </div>
-                    @endforeach
                     @endforeach
 
                 </div>
             </div>
         </section>
+
+
+
 
         <aside class="bg-dark">
             <div class="container text-center">
@@ -161,3 +154,4 @@
     </body>
 
 </html>
+

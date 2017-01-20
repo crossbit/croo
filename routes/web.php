@@ -13,6 +13,7 @@
 
 Route::resource('category', 'CategoryController');
 Route::resource('photo', 'PhotoController');
+Route::resource('recruitment', 'RecruitmentController');
 Route::resource('portfolio', 'PortfolioController');
 Route::get('/portfolio/category/{categoryId}', ['uses' => 'PortfolioController@getPortfoliosCategory']);
 Route::get('/', ['uses' => 'HomeController@index']);
