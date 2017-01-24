@@ -1,4 +1,1 @@
-@extends('admin') 
-@section('content')
-
-@endsection
+dziala

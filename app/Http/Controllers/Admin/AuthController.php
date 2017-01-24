@@ -9,7 +9,7 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
-    use AuthenticatesAndRegistersUsers;
+    
 
     protected $loginView = 'admin.auth.login';
 
@@ -21,4 +21,6 @@ class AuthController extends Controller
     {
         $this->redirectTo = route('admin.home');
     }
+    
+    
 }

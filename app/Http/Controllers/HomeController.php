@@ -16,7 +16,6 @@ class HomeController extends Controller {
     public function index() {
         $categories = Category::all();
         $images = Portfolio::all();
-
         return view('home.index')
                         ->with('categories', $categories)
                         ->with('images', $images);

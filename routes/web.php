@@ -23,7 +23,6 @@ Route::get('/contact', function() {
 });
 
 
-
 Route::group(['prefix' => 'admin'], function() {
     Route::get('/login', ['as' => 'admin.getLogin', 'uses' => 'Admin\AuthController@getLogin']);
     Route::post('/login', ['as' => 'admin.postLogin', 'uses' => 'Admin\AuthController@postLogin']);
@@ -34,3 +33,7 @@ Route::group(['prefix' => 'admin'], function() {
     });
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
