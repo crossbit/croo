@@ -49,7 +49,7 @@ return [
     ],
     /*
       |--------------------------------------------------------------------------
-      | User Providers
+      | User Providers + Entrust
       |--------------------------------------------------------------------------
       |
       | All authentication drivers have a user provider. This defines how the
@@ -63,6 +63,9 @@ return [
       | Supported: "database", "eloquent"
       |
      */
+
+    'model' => App\User::class,
+
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
@@ -72,11 +75,6 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-
-        'admins' => [
-            'driver' => 'eloquent.admin',
-            'model' => App\User::class,
-        ],
     ],
     /*
       |--------------------------------------------------------------------------

@@ -86,7 +86,6 @@
 
         </aside>
 
-
         <section class="bg-primary" id="about">
             <div class="container-fluid">
                 <div class="row no-gutter">

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Portfolio;
 use App\Photo;
-use Image;
+use Intervention\Image\Facades\Image;
 
 class PhotoController extends Controller {
 
@@ -21,11 +21,12 @@ class PhotoController extends Controller {
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function create() {
         $portfolios = Portfolio::pluck('name', 'id')->all();
-        return view('photo.create')->with('portfolios', $portfolios);
+        return view('photo.create')
+            ->with('portfolios', $portfolios);
     }
 
     /**
@@ -36,8 +37,7 @@ class PhotoController extends Controller {
      */
     public function store(Request $request) {
         $result = $request->all();
-
-        $image = \Image::make($request->file('img'));
+        $image = Image::make($request->file('img'));
         $imageName = time() . uniqid() . $request->file('img')->getClientOriginalName();
         $path = public_path('/uploads/thumbnail');
         $img = Image::make($request->file('img'));
@@ -50,17 +50,19 @@ class PhotoController extends Controller {
         $result['thumbnail'] = '/uploads/thumbnail/' . $imageName;
         $photo = Photo::create($result);
 
-        return redirect()->route('photo.show', ['id' => $photo->id]);
+        return redirect()
+            ->route('photo.show', [
+                'id' => $photo->id
+            ]);
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function show($id) {
-
         $result = Photo::findOrFail($id);
         return view('photo.show')->with('result', $result);
     }

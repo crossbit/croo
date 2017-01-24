@@ -11,15 +11,14 @@ class HomeController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index() {
         $categories = Category::all();
         $images = Portfolio::all();
-
         return view('home.index')
-                        ->with('categories', $categories)
-                        ->with('images', $images);
+            ->with('categories', $categories)
+            ->with('images', $images);
     }
 
     public function portfolio() {

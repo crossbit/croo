@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Requests;
+
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Contracts\Validation\Validator;
-use Response;
+
 class PortfolioAddRequest extends FormRequest {
+
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -13,6 +14,12 @@ class PortfolioAddRequest extends FormRequest {
     public function authorize() {
         return true;
     }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
     public function rules() {
         return [
             'name' => 'required|string|min:1',
@@ -20,6 +27,7 @@ class PortfolioAddRequest extends FormRequest {
             'category_id' => 'required',
         ];
     }
+
     /**
      * Get the error messages for the defined validation rules.
      *

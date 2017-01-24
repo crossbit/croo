@@ -1,6 +1,7 @@
 
 
 {!! Form::open(array('action' => 'CategoryController@store', 'class'=>'form-horizontal')) !!}
+
 <ul class="errors">
     @foreach($errors->all(':message') as $message)
     {{ $message }}

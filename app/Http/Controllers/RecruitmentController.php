@@ -10,12 +10,12 @@ class RecruitmentController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index() {
         $recruitments = Recruitment::with('tasks')->with('needs')->with('offers')->get();
         return view('recruitment.index')
-                        ->with('recruitments', $recruitments);
+            ->with('recruitments', $recruitments);
     }
 
     /**
@@ -45,12 +45,12 @@ class RecruitmentController extends Controller {
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function show($id) {
         $recruitment = Recruitment::with('tasks')->with('needs')->with('offers')->where('id', '=', $id)->get();
-
-        return view('recruitment.show')->with('recruitment', $recruitment);
+        return view('recruitment.show')
+            ->with('recruitment', $recruitment);
     }
 
     /**

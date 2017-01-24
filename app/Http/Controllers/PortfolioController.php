@@ -15,56 +15,62 @@ class PortfolioController extends Controller {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function index() {
         $categories = Category::all();
         $portfolios = Portfolio::with('photos')->get();
         return view('portfolio.index')
-                        ->with('categories', $categories)
-                        ->with('portfolios', $portfolios);
+            ->with('categories', $categories)
+            ->with('portfolios', $portfolios);
     }
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function create() {
         $categories = Category::pluck('name', 'id')->all();
-        return view('portfolio.create')->with('categories', $categories);
+        return view('portfolio.create')
+            ->with('categories', $categories);
     }
+
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param PortfolioAddRequest|Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(PortfolioAddRequest $request) {
         $result = $request->all();
         $portfolio = Portfolio::create($result);
-        return redirect()->route('portfolio.show', ['id' => $portfolio->id]);
+        return redirect()->route('portfolio.show', [
+            'id' => $portfolio->id
+        ]);
     }
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function show($id) {
         $result = Portfolio::with('photos')->where('id', '=', $id)->get();
-        
-        return view('portfolio.show')->with('result', $result);
+        return view('portfolio.show')
+            ->with('result', $result);
     }
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function edit($id) {
         $result = Portfolio::findOrFail($id);
         $categories = Category::pluck('name', 'id')->all();
-        return view('portfolio.edit')->with('result', $result)->with('categories', $categories);
+        return view('portfolio.edit')
+            ->with('result', $result)
+            ->with('categories', $categories);
     }
     /**
      * Update the specified resource in storage.
@@ -76,13 +82,15 @@ class PortfolioController extends Controller {
     public function update(Request $request, $id) {
         $result = Portfolio::findOrFail($id);
         $result->update($request->all());
-        return redirect()->route('portfolio.show', ['id' => $result->id]);
+        return redirect()->route('portfolio.show', [
+            'id' => $result->id
+        ]);
     }
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\View\View
      */
     public function destroy($id) {
         $result = Portfolio::findOrFail($id);
@@ -90,8 +98,8 @@ class PortfolioController extends Controller {
         $categories = Category::all();
         $images = Portfolio::all();
         return view('portfolio.index')
-                        ->with('categories', $categories)
-                        ->with('images', $images);
+            ->with('categories', $categories)
+            ->with('images', $images);
     }
     /**
      * Display all portfolios item from one category .
@@ -100,10 +108,11 @@ class PortfolioController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function getPortfoliosCategory($categoryId) {
-
-         $portfolios = Portfolio::with('photos')->where('category_id', '=', $categoryId)->get();
-         $category = Category::findOrFail($categoryId);
-         
-        return view('portfolio.getPortfolioCategory', ['portfolios' => $portfolios, 'category' => $category]);
+        $portfolios = Portfolio::with('photos')->where('category_id', '=', $categoryId)->get();
+        $category = Category::findOrFail($categoryId);
+        return view('portfolio.getPortfolioCategory', [
+            'portfolios' => $portfolios,
+            'category' => $category
+        ]);
     }
 }
